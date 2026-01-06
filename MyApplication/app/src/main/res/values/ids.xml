@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recipes_button" type="id" />
+    <item name="calendar_button" type="id" />
+    <item name="recipes_recycler_view" type="id" />
+    <item name="add_recipe_button" type="id" />
+    <item name="search_edit_text" type="id" />
+    <item name="max_calories_edit_text" type="id" />
+    <item name="date_text_view" type="id" />
+    <item name="calories_text_view" type="id" />
+    <item name="exercises_recycler_view" type="id" />
+    <item name="add_exercise_button" type="id" />
+    <item name="recipe_name_text_view" type="id" />
+    <item name="recipe_calories_text_view" type="id" />
+    <item name="favorite_checkbox" type="id" />
+    <item name="calendar_view" type="id" />
+    <item name="exercise_plan_name_text_view" type="id" />
+    <item name="exercise_plan_time_text_view" type="id" />
+    <item name="exercise_plan_rounds_text_view" type="id" />
+    <item name="cancel_button" type="id" />
+</resources>
