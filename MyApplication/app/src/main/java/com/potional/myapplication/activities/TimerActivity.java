@@ -93,7 +93,7 @@ public class TimerActivity extends AppCompatActivity {
             String secondsStr = timerSecondsEditText.getText().toString();
 
             if (TextUtils.isEmpty(minutesStr) && TextUtils.isEmpty(secondsStr)) {
-                Toast.makeText(this, "Please enter a duration", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.please_enter_a_duration, Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -102,7 +102,7 @@ public class TimerActivity extends AppCompatActivity {
 
             long durationInMillis = (minutes * 60 + seconds) * 1000;
             if (durationInMillis == 0) {
-                Toast.makeText(this, "Duration must be greater than 0", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.duration_must_be_greater_than_0, Toast.LENGTH_SHORT).show();
                 return;
             }
             timeLeftInMillis = durationInMillis;

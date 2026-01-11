@@ -11,7 +11,7 @@ android {
         minSdk = 24
         targetSdk = 36
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,4 +46,5 @@ dependencies {
     annotationProcessor(libs.room.compiler)
     implementation(libs.recyclerview)
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation("androidx.preference:preference:1.2.1")
 }

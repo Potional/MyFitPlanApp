@@ -15,7 +15,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Search exercise plans..." />
+            android:hint="@string/search_exercise_plans" />
 
     </LinearLayout>
 
@@ -23,7 +23,7 @@
         android:id="@+id/add_plan_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add New Exercise Plan"
+        android:text="@string/add_new_exercise_plan"
         android:layout_margin="16dp" />
 
     <androidx.recyclerview.widget.RecyclerView

@@ -3,6 +3,7 @@ package com.potional.myapplication.activities;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -64,12 +65,12 @@ public class CalorieChartActivity extends AppCompatActivity {
             xLabels.add(dayPlan.getDate().substring(8)); // Extract day from date
         }
 
-        LineDataSet consumedDataSet = new LineDataSet(consumedEntries, "Calories Consumed");
-        LineDataSet burnedDataSet = new LineDataSet(burnedEntries, "Calories Burned");
+        LineDataSet consumedDataSet = new LineDataSet(consumedEntries, getString(R.string.calories_consumed_text));
+        LineDataSet burnedDataSet = new LineDataSet(burnedEntries, getString(R.string.calories_burned_text));
 
         // Customize colors
-        consumedDataSet.setColor(getResources().getColor(R.color.colorConsumed));
-        burnedDataSet.setColor(getResources().getColor(R.color.colorBurned));
+        consumedDataSet.setColor(ContextCompat.getColor(this, R.color.colorConsumed));
+        burnedDataSet.setColor(ContextCompat.getColor(this, R.color.colorBurned));
 
         LineData lineData = new LineData(consumedDataSet, burnedDataSet);
 

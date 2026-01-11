@@ -9,7 +9,7 @@
         android:id="@+id/exercise_name_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Exercise Name">
+        android:hint="@string/exercise_name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/exercise_name_edit_text"
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Description">
+        android:hint="@string/description">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/exercise_description_edit_text"
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Sets"
+        android:hint="@string/sets"
         android:inputType="number">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Reps"
+        android:hint="@string/reps"
         android:inputType="number">
 
         <com.google.android.material.textfield.TextInputEditText

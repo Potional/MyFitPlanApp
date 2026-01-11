@@ -28,13 +28,13 @@ public class ChartsActivity extends AppCompatActivity {
         chartsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         List<String> chartList = new ArrayList<>();
-        chartList.add("Weight Progression");
-        chartList.add("Calorie Intake vs. Burned");
+        chartList.add(getString(R.string.weight_progression));
+        chartList.add(getString(R.string.calorie_intake_vs_burned));
 
         ChartAdapter adapter = new ChartAdapter(chartList, chartName -> {
-            if (chartName.equals("Weight Progression")) {
+            if (chartName.equals(getString(R.string.weight_progression))) {
                 startActivity(new Intent(this, WeightChartActivity.class));
-            } else if (chartName.equals("Calorie Intake vs. Burned")) {
+            } else if (chartName.equals(getString(R.string.calorie_intake_vs_burned))) {
                 startActivity(new Intent(this, CalorieChartActivity.class));
             }
         });

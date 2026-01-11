@@ -9,27 +9,27 @@
         android:id="@+id/recipe_name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Recipe Name" />
+        android:hint="@string/recipe_name" />
 
     <EditText
         android:id="@+id/calories_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Total Calories"
+        android:hint="@string/total_calories"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/steps_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Cooking Steps"
+        android:hint="@string/cooking_steps"
         android:inputType="textMultiLine"
         android:minLines="3" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ingredients:" 
+        android:text="@string/ingredients"
         android:layout_marginTop="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -42,12 +42,12 @@
         android:id="@+id/add_ingredient_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Ingredient" />
+        android:text="@string/add_new_ingredient_text" />
 
     <Button
         android:id="@+id/save_recipe_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Recipe" />
+        android:text="@string/save_recipe" />
 
 </LinearLayout>

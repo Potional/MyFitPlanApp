@@ -25,20 +25,20 @@
         android:id="@+id/add_recipe_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Recipe to Day"
+        android:text="@string/add_recipe_to_day"
         android:layout_margin="16dp" />
 
     <Button
         android:id="@+id/add_exercise_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Exercise Plan to Day"
+        android:text="@string/add_exercise_plan_to_day"
         android:layout_margin="16dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recipes for this day:"
+        android:text="@string/recipes_for_this_day"
         android:textSize="18sp"
         android:padding="16dp" />
 
@@ -51,7 +51,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Exercises for this day:"
+        android:text="@string/exercises_for_this_day"
         android:textSize="18sp"
         android:padding="16dp" />
 

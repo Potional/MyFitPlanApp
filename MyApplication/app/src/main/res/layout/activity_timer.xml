@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chronometer"
+        android:text="@string/chronometer"
         android:textSize="20sp" />
 
     <Chronometer
@@ -28,19 +28,19 @@
             android:id="@+id/start_chronometer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/stop_chronometer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stop" />
+            android:text="@string/stop" />
 
         <Button
             android:id="@+id/reset_chronometer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reset" />
+            android:text="@string/reset" />
     </LinearLayout>
 
     <!-- Countdown Timer -->
@@ -48,14 +48,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Countdown Timer"
+        android:text="@string/countdown_timer"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/countdown_timer_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00:00"
+        android:text="@string/_00_00"
         android:textSize="48sp" />
 
     <LinearLayout
@@ -67,14 +67,14 @@
             android:id="@+id/timer_minutes_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Minutes"
+            android:hint="@string/minutes"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/timer_seconds_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Seconds"
+            android:hint="@string/seconds"
             android:inputType="number" />
 
     </LinearLayout>
@@ -88,13 +88,13 @@
             android:id="@+id/start_timer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/stop_timer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stop" />
+            android:text="@string/stop" />
 
     </LinearLayout>
 

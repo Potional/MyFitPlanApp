@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.potional.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
-    private Button recipesButton, exercisesButton, calendarButton, timerButton, progressionButton, chartsButton;
+    private Button recipesButton, exercisesButton, calendarButton, timerButton, progressionButton, chartsButton, settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         timerButton = findViewById(R.id.timer_button);
         progressionButton = findViewById(R.id.progression_button);
         chartsButton = findViewById(R.id.charts_button);
+        settingsButton = findViewById(R.id.settings_button);
 
         recipesButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, RecipesActivity.class);
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
         chartsButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, ChartsActivity.class);
+            startActivity(intent);
+        });
+
+        settingsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
         });
     }

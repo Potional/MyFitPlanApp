@@ -70,6 +70,9 @@
         <activity
             android:name=".activities.CalorieChartActivity"
             android:parentActivityName=".activities.ChartsActivity" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity" />
 
     </application>
 

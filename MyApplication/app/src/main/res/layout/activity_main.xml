@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fitness App"
+        android:text="@string/fitness_app"
         android:textSize="24sp"
         android:layout_marginBottom="40dp"/>
 
@@ -16,42 +16,49 @@
         android:id="@+id/recipes_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Recipes"
+        android:text="@string/recipesText"
         android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/exercises_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Exercises Plans"
+        android:text="@string/exercises_plans_Text"
         android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/calendar_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Calendar"
+        android:text="@string/calendar_text"
         android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/timer_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Timer"
+        android:text="@string/timer_text"
         android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/progression_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Progression"
+        android:text="@string/progression_text"
         android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/charts_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Charts"
+        android:text="@string/charts_text"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_text"
         android:layout_margin="10dp"/>
 
 </LinearLayout>

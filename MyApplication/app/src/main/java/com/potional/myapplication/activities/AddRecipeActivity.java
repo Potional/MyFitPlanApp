@@ -80,7 +80,7 @@ public class AddRecipeActivity extends AppCompatActivity {
 
     private void showAddIngredientDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Add New Ingredient");
+        builder.setTitle(R.string.add_new_ingredient);
 
         View view = getLayoutInflater().inflate(R.layout.dialog_add_ingredient, null);
         builder.setView(view);
@@ -89,13 +89,13 @@ public class AddRecipeActivity extends AppCompatActivity {
         EditText caloriesEditText = view.findViewById(R.id.ingredient_calories_edit_text);
         EditText typeEditText = view.findViewById(R.id.ingredient_type_edit_text);
 
-        builder.setPositiveButton("Add", (dialog, which) -> {
+        builder.setPositiveButton(R.string.add, (dialog, which) -> {
             String name = nameEditText.getText().toString().trim();
             String caloriesStr = caloriesEditText.getText().toString().trim();
             String type = typeEditText.getText().toString().trim();
 
             if (TextUtils.isEmpty(name) || TextUtils.isEmpty(caloriesStr) || TextUtils.isEmpty(type)) {
-                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.please_fill_all_fields, Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -112,7 +112,7 @@ public class AddRecipeActivity extends AppCompatActivity {
             });
         });
 
-        builder.setNegativeButton("Cancel", null);
+        builder.setNegativeButton(R.string.cancel, null);
         builder.create().show();
     }
 
@@ -122,17 +122,17 @@ public class AddRecipeActivity extends AppCompatActivity {
         String steps = stepsEditText.getText().toString().trim();
 
         if (TextUtils.isEmpty(name)) {
-            nameEditText.setError("Please enter recipe name");
+            nameEditText.setError(getString(R.string.please_enter_recipe_name));
             return;
         }
 
         if (TextUtils.isEmpty(caloriesStr)) {
-            caloriesEditText.setError("Please enter total calories");
+            caloriesEditText.setError(getString(R.string.please_enter_total_calories));
             return;
         }
 
         if (TextUtils.isEmpty(steps)) {
-            stepsEditText.setError("Please enter cooking steps");
+            stepsEditText.setError(getString(R.string.please_enter_cooking_steps));
             return;
         }
 
@@ -140,7 +140,7 @@ public class AddRecipeActivity extends AppCompatActivity {
 
         List<Ingredient> selectedIngredients = ingredientAdapter.getSelectedIngredients();
         if (selectedIngredients.isEmpty()) {
-            Toast.makeText(this, "Please select at least one ingredient", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.please_select_at_least_one_ingredient, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -160,7 +160,7 @@ public class AddRecipeActivity extends AppCompatActivity {
             database.recipeDao().insertRecipeWithIngredients(recipe, recipeIngredients, database.recipeIngredientDao());
 
             runOnUiThread(() -> {
-                Toast.makeText(this, "Recipe saved successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.recipe_saved_successfully, Toast.LENGTH_SHORT).show();
                 finish();
             });
         });

@@ -74,15 +74,22 @@ public class ProgressionDetailsActivity extends AppCompatActivity {
         dateTextView.setText(currentDate);
 
         if (!isToday) {
-            weightEditText.setEnabled(false);
-            musclePercentEditText.setEnabled(false);
-            fatPercentEditText.setEnabled(false);
+            setReadOnly(weightEditText);
+            setReadOnly(musclePercentEditText);
+            setReadOnly(fatPercentEditText);
             selectPhotoButton.setVisibility(View.GONE);
             saveProgressionButton.setVisibility(View.GONE);
         } else {
             selectPhotoButton.setOnClickListener(v -> showPhotoDialog());
             saveProgressionButton.setOnClickListener(v -> saveProgression());
         }
+    }
+
+    private void setReadOnly(EditText editText) {
+        editText.setFocusable(false);
+        editText.setClickable(false);
+        editText.setFocusableInTouchMode(false);
+        editText.setEnabled(false);
     }
 
     private void showPhotoDialog() {

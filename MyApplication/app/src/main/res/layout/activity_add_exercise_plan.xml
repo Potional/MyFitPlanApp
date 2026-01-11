@@ -9,12 +9,12 @@
         android:id="@+id/plan_name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Plan Name" />
+        android:hint="@string/plan_name" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Exercises:"
+        android:text="@string/exercises"
         android:layout_marginTop="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -27,12 +27,12 @@
         android:id="@+id/add_exercise_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Exercise" />
+        android:text="@string/add_new_exercise" />
 
     <Button
         android:id="@+id/save_plan_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Plan" />
+        android:text="@string/save_plan" />
 
 </LinearLayout>

@@ -111,7 +111,7 @@ public class DayDetailsActivity extends AppCompatActivity {
                     exercisePlanAdapter.updateExercisePlans(new ArrayList<>());
                 }
 
-                caloriesTextView.setText(String.format(Locale.getDefault(), "Consumed: %.2f | Burned: %.2f", caloriesConsumed, caloriesBurned));
+                caloriesTextView.setText(String.format(getString(R.string.consumed_burned_format), caloriesConsumed, caloriesBurned));
             });
         });
     }

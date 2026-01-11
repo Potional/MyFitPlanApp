@@ -9,19 +9,19 @@
         android:id="@+id/ingredient_name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingredient Name" />
+        android:hint="@string/ingredient_name" />
 
     <EditText
         android:id="@+id/ingredient_calories_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Calories per 100g" 
+        android:hint="@string/calories_per_100g"
         android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/ingredient_type_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type (e.g., fruit, vegetable)" />
+        android:hint="@string/type_e_g_fruit_vegetable" />
 
 </LinearLayout>

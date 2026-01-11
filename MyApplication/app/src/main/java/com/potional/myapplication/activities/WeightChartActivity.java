@@ -1,9 +1,9 @@
 package com.potional.myapplication.activities;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -61,21 +61,20 @@ public class WeightChartActivity extends AppCompatActivity {
 
         for (int i = 0; i < progressionList.size(); i++) {
             Progression progression = progressionList.get(i);
-            // The x-value is the position, the y-value is the data
             weightEntries.add(new BarEntry(i, (float) progression.getWeight()));
             fatEntries.add(new BarEntry(i, (float) progression.getFatPercent()));
             muscleEntries.add(new BarEntry(i, (float) progression.getMusclePercent()));
-            xLabels.add(progression.getDate().substring(8)); // Extract day from date string
+            xLabels.add(progression.getDate().substring(8)); // Extract day from date
         }
 
-        BarDataSet weightDataSet = new BarDataSet(weightEntries, "Weight");
-        BarDataSet fatDataSet = new BarDataSet(fatEntries, "Fat %");
-        BarDataSet muscleDataSet = new BarDataSet(muscleEntries, "Muscle %");
+        BarDataSet weightDataSet = new BarDataSet(weightEntries, getString(R.string.weight));
+        BarDataSet fatDataSet = new BarDataSet(fatEntries, getString(R.string.fat_percent));
+        BarDataSet muscleDataSet = new BarDataSet(muscleEntries, getString(R.string.muscle_percent));
 
-        // Set colors for the datasets
-        weightDataSet.setColor(Color.BLUE);
-        fatDataSet.setColor(Color.RED);
-        muscleDataSet.setColor(Color.GREEN);
+        // Customize colors
+        weightDataSet.setColor(ContextCompat.getColor(this, R.color.colorWeight));
+        fatDataSet.setColor(ContextCompat.getColor(this, R.color.colorFat));
+        muscleDataSet.setColor(ContextCompat.getColor(this, R.color.colorMuscle));
 
         float groupSpace = 0.1f;
         float barSpace = 0.05f;
@@ -95,6 +94,6 @@ public class WeightChartActivity extends AppCompatActivity {
         barChart.groupBars(0f, groupSpace, barSpace);
         barChart.getXAxis().setAxisMinimum(0);
         barChart.getXAxis().setAxisMaximum(xLabels.size());
-        barChart.invalidate(); // Refresh chart
+        barChart.invalidate();
     }
 }
